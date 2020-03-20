@@ -4,7 +4,7 @@
 
 
 function trottle(fn, delay) {
-  var preTime = 0;
+  var preTime = Date.now();
   return function() {
     var now = Date.now();
     if (now - preTime >= delay) {

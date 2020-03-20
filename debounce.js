@@ -23,7 +23,7 @@ function debounce(fn, delay) {
 
 function debounceAndTrottle(fn, delay) {
   var interval = null;
-  var preTime = 0;
+  var preTime = Date.now();
   return function() {
     var now = Date.now();
     var remainder = delay - ( now - preTime );
